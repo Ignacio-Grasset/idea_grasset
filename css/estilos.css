@@ -85,23 +85,6 @@ li {
     padding-top: 40px;
     padding-left: 20px;
     padding-bottom: 20px;
-
-    animation-name: aparecer;
-
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes aparecer {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
 
 #footer {
