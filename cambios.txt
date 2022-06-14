@@ -1,0 +1,10 @@
+CAMBIOS REALIZADOS:
+
+- Agregué una descripción a cada pagina del sitio.
+- Agregué keywords en cada pagina del sitio.
+- Cambié los titulos de cada página para que esten relacionados con el contenido.
+- Verifiqué que los encabezados h1 se respeten y solo se usen para titulos principales.
+- Agregué un mapa de colores para poder usar sus valores en distintas declaraciónes.
+- Agregué un extend para la clase .boton2.
+- Agregué un mixin para el id #footer.
+
