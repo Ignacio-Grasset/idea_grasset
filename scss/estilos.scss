@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/*Mapa*/
+
+$colores:(blanco:#fff, azul-oscuro: #0f0e1f, azul-claro:#1b1933, gris:#808080);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+#body {
+    background-image: url(../assets/imagenes/crowd.jpg);
+    background-size: cover;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: map-get($colores, azul-oscuro );
+}
+
+.titulo {
+    color: map-get($colores, blanco );
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    color: map-get($colores, blanco );
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+li {
+    display: inline;
+    color: map-get($colores, blanco );
+    text-decoration: none;
+}
+
+.titulo2 {
+    color: map-get($colores, blanco );
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.texto {
+    color: map-get($colores, blanco );
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    background-color: rgba(15, 14, 31, 0.5);
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.texto:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.textobio {
+    color: map-get($colores, blanco );
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    background-color: rgba(15, 14, 31, 0.5);
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.textobio:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.textodisc {
+    color: map-get($colores, blanco );
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    animation-name: aparecer;
+
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Mixin */
+
+@mixin sizes ($height, $width, $bottom) {
+    height: $height;
+    width: $width;
+    bottom: $bottom;
+}
+
+#footer {
+    @include sizes(50px, 100%, 0%);
+}
+
+.titulofooter {
+    color: map-get($colores, blanco );
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 5px;
+}
+
+.redes a:hover {
+    color: map-get($colores, gris );
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+}
+
+.redes a {
+    color: map-get($colores, blanco );
+    transition: color 0.2s;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+header ul {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: map-get($colores, azul-claro );
+}
+
+a {
+    color: map-get($colores, blanco );
+    font-family: 'Anton', sans-serif;
+    text-decoration: none !important; /*Tuve que agregar un important ya que desde que implemente el bootstrap se le agregó un subrayado a los links que no pude sacar de otra manera */
+}
+
+a:hover {
+    transition: color 0.2s;
+    color: map-get($colores, gris );
+}
+
+iframe {
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    color: map-get($colores, blanco );
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    margin-left: 35%;
+    margin-top: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.tabla {
+    background-color: map-get($colores, azul-claro );
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tabla:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+th, td {
+    width: 150px;
+    text-align: center;
+    border: solid 1px;
+    border-color: map-get($colores, azul-claro );
+    background-color: map-get($colores, azul-claro );
+    color: map-get($colores, blanco );
+}
+
+.lugar {
+    color: map-get($colores, blanco );
+    margin-left: 20px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.mapouter {
+    margin-left: 32%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.link:hover {
+    color: map-get($colores, blanco );
+    background-color: red;
+}
+
+#input {
+    height: 30px;
+    color: map-get($colores, blanco );
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+/* Extend */
+
+.boton1 {
+    margin-bottom: 10px;
+    margin-left: 1px;
+}
+
+.boton2 {
+    @extend .boton1
+}
+
+.tom {
+    height: 350px;
+    float: left;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.carousel-inner {
+    margin-left: 25%;
+}
+
+.carousel-control-prev {
+    margin-left: 20%;
+}
+
+.carousel-control-next {
+    margin-right: 20%;
+}
+
+.carousel-item {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    }
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    }
