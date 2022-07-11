@@ -8,10 +8,15 @@
 
 html {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #body {
   background-image: url(../assets/imagenes/crowd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   min-height: 100%;
   display: -webkit-box;
@@ -216,10 +221,17 @@ a:hover {
   color: #808080;
 }
 
-iframe {
-  margin-top: 10px;
-  margin-left: 90px;
-  margin-right: 10px;
+.spotify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -227,14 +239,22 @@ iframe {
   color: #fff;
   font-size: 20px;
   font-family: 'Anton', sans-serif;
-  margin-left: 35%;
-  margin-top: 20px;
   text-shadow: 2px 2px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tabla {
   background-color: #1b1933;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   margin-bottom: 30px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -267,10 +287,9 @@ th, td {
   text-shadow: 2px 2px black;
 }
 
-.mapouter {
-  margin-left: 32%;
-  margin-bottom: 20px;
-  margin-top: 10px;
+.mapa {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .link:hover {
@@ -289,8 +308,9 @@ th, td {
 
 /* Extend */
 .boton1, .boton2 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-left: 1px;
+  display: inline-block;
 }
 
 .tom {
@@ -300,26 +320,45 @@ th, td {
   margin-left: 20px;
 }
 
-.carousel-inner {
-  margin-left: 25%;
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
 }
 
-.carousel-control-prev {
-  margin-left: 20%;
-}
-
-.carousel-control-next {
-  margin-right: 20%;
-}
-
-.carousel-item {
-  height: 400px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  height: 100%;
-  width: 100%;
+@media (max-width: 380px) {
+  ul li {
+    font-size: smaller;
+    padding: 5px;
+    margin-right: -10px;
+  }
+  .mapa iframe {
+    height: 70%;
+    width: 70%;
+  }
+  table {
+    width: 90%;
+    font-size: 10px;
+  }
+  .formulario {
+    font-size: 20px;
+    text-align: center;
+  }
+  input {
+    max-width: 200x;
+    width: 80%;
+    min-width: 50px;
+  }
+  .carousel-inner img {
+    height: 200px;
+    width: 200px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

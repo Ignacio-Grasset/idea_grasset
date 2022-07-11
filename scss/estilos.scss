@@ -11,10 +11,15 @@ $colores:(blanco:#fff, azul-oscuro: #0f0e1f, azul-claro:#1b1933, gris:#808080);
 
 html {
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 #body {
     background-image: url(../assets/imagenes/crowd.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     min-height: 100%;
     display: flex;
@@ -187,10 +192,11 @@ a:hover {
     color: map-get($colores, gris );
 }
 
-iframe {
-    margin-top: 10px;
-    margin-left: 90px;
-    margin-right: 10px;
+.spotify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -198,14 +204,16 @@ iframe {
     color: map-get($colores, blanco );
     font-size: 20px;
     font-family: 'Anton', sans-serif;
-    margin-left: 35%;
-    margin-top: 20px;
     text-shadow: 2px 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tabla {
     background-color: map-get($colores, azul-claro );
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
     margin-bottom: 30px;
     transition: transform 0.3s ease-in-out;
@@ -233,10 +241,9 @@ th, td {
     text-shadow: 2px 2px black;
 }
 
-.mapouter {
-    margin-left: 32%;
-    margin-bottom: 20px;
-    margin-top: 10px;
+.mapa {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .link:hover {
@@ -251,14 +258,14 @@ th, td {
     font-family: 'Anton', sans-serif;
     margin-left: 10px;
     margin-top: 10px;
-    
 }
 
 /* Extend */
 
 .boton1 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-left: 1px;
+    display: inline-block;
 }
 
 .boton2 {
@@ -272,25 +279,45 @@ th, td {
     margin-left: 20px;
 }
 
-.carousel-inner {
-    margin-left: 25%;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.carousel-control-prev {
-    margin-left: 20%;
-}
+@media (max-width: 380px) {
 
-.carousel-control-next {
-    margin-right: 20%;
-}
-
-.carousel-item {
-    height: 400px;
-    width: 100%;
-    overflow: hidden;
+    ul li {
+        font-size: smaller;
+        padding: 5px;
+        margin-right: -10px;
     }
 
-.carousel-item img {
-    height: 100%;
-    width: 100%;
+    .mapa iframe {
+        height: 70%;
+        width: 70%;
     }
+
+    table {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .formulario {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    input {
+        max-width: 200x;
+        width: 80%;
+        min-width: 50px;
+    }
+
+    .carousel-inner img{
+        height: 200px;
+        width: 200px;
+    }
+
+}
