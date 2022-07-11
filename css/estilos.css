@@ -251,6 +251,10 @@ a:hover {
           justify-content: center;
 }
 
+#input {
+  color: rgb(29, 28, 28) !important;
+}
+
 .tabla {
   background-color: #1b1933;
   margin-left: auto;
